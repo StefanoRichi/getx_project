@@ -10,7 +10,7 @@ class Home extends StatelessWidget {
     final ItemsController itemsCon = Get.put(ItemsController());
     return Scaffold(
         appBar: AppBar(
-          title: Text("TakeIT Shopping"),
+          title: Text("TakeITshop"),
           centerTitle: true,
           actions: [
             Obx(() => IconButton(
@@ -41,17 +41,26 @@ class Home extends StatelessWidget {
               child: Column(
                 children: [
                   Flexible(
-                    flex: 4,
-                    child: Image.asset(
-                      fit: BoxFit.cover,
-                      itemsCon.ms_item[index].image.toString(),
+                    flex: 6,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      child: Container(
+                        width: double.infinity,
+                        child: Image.asset(
+                          fit: BoxFit.cover,
+                          itemsCon.ms_item[index].image.toString(),
+                        ),
+                      ),
                     ),
                   ),
                   Flexible(
                       flex: 1,
-                      child: Text(
-                        itemsCon.ms_item[index].name.toString(),
-                        overflow: TextOverflow.ellipsis,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 10, right: 10),
+                        child: Text(
+                          itemsCon.ms_item[index].name.toString(),
+                          overflow: TextOverflow.ellipsis,
+                        ),
                       )),
                   Flexible(
                       flex: 1,

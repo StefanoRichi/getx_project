@@ -28,9 +28,12 @@ class Carts extends StatelessWidget {
                 itemsCon.slide_removeitem(itemsCon.item[index]),
             child: Card(
               child: ListTile(
-                leading: Image.asset(
-                  fit: BoxFit.cover,
-                  itemsCon.item[index].image.toString(),
+                contentPadding: EdgeInsets.all(10),
+                leading: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(5)),
+                  child: Image.asset(
+                    itemsCon.item[index].image.toString(),
+                  ),
                 ),
                 title: Text(itemsCon.item[index].name.toString()),
                 subtitle: Text(itemsCon.item[index].price.toString()),
@@ -66,6 +69,13 @@ class Carts extends StatelessWidget {
         () => Padding(
           padding: const EdgeInsets.only(left: 40.0, right: 40, bottom: 100),
           child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              padding: EdgeInsets.all(15),
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
             onPressed: () {
               itemsCon.checkout();
             },
@@ -79,8 +89,12 @@ class Carts extends StatelessWidget {
                 : Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("฿${itemsCon.total}"),
-                      Text("Checkout"),
+                      Text("฿${itemsCon.total}",
+                          style: TextStyle(fontSize: 18)),
+                      Text(
+                        "Checkout",
+                        style: TextStyle(fontSize: 18),
+                      ),
                     ],
                   ),
           ),
