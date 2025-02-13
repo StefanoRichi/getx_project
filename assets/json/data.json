@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "name": "ต้นบอนไซ - แก้วแคระมหามงคล",
+        "price": 1090.00,
+        "image": "assets/images/1.jpg"
+    },
+    {
+        "id": "2",
+        "name": "ต้นแก้วแคระมหามงคล",
+        "price": 990.00,
+        "image": "assets/images/2.jpg"
+    },
+    {
+        "id": "3",
+        "name": "ต้นฟิโลเดนดรอน เบอร์กิ้น",
+        "price": 990.00,
+        "image": "assets/images/3.jpg"
+    },
+    {
+        "id": "4",
+        "name": "ต้นกวักมรกต",
+        "price": 1090.00,
+        "image": "assets/images/4.jpg"
+    }
+]
